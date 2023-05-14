@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="This is a page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,22 +19,42 @@
   <header class="main-header">
     <div class="container header-container">
       <nav class="navigation-header">
+
         <!-- Logo -->
-        <a href="./index.html" class="logo link">Web<span class="logo-studio">Studio</span></a>
-        <!-- Navigation -->
-        <ul class="list menu">
-          <li><a href="./index.html" class="link menu-link menu-active">Studio</a></li>
-          <li><a href="./portfolio.html" class="link menu-link">Portfolio</a></li>
-          <li><a href="" class="link menu-link">Contacts</a></li>
-        </ul>
+        <a href="./index.html" class="header-logo link">Web<span class="logo-studio">Studio</span></a>
+
+        <!-- Mobile menu button -->
+        <button class="menu-hamburger" type="button" data-menu-button>
+          <svg width="32" height="32" aria-label="Mobile menu toggle button">
+
+            <use class="icon-menu-close" href="./images/icons/icon_close.svg"></use>
+            <use class="icon-menu" href="./images/icons/icon_menu_hamburger.svg"></use>
+          </svg>
+
+        </button>
+
+
+        <div class="menu-container">
+          <!-- Navigation -->
+          <ul class="list menu">
+            <li><a href="./index.html" class="link menu-link menu-active">Studio</a></li>
+            <li><a href="./portfolio.html" class="link menu-link">Portfolio</a></li>
+            <li><a href="" class="link menu-link">Contacts</a></li>
+          </ul>
+
+          <!-- Contacts -->
+          <address class="address">
+            <ul class="list contacts">
+              <li><a href="mailto:info@devstudio.com" class="link contact">info@devstudio.com</a></li>
+              <li><a href="tel:+110001111111" class="link contact">+11 (000) 111-11-11</a></li>
+            </ul>
+          </address>
+        </div>
+
+
       </nav>
-      <!-- Contacts -->
-      <address class="address">
-        <ul class="list contacts">
-          <li><a href="mailto:info@devstudio.com" class="link contact">info@devstudio.com</a></li>
-          <li><a href="tel:+110001111111" class="link contact">+11 (000) 111-11-11</a></li>
-        </ul>
-      </address>
+
+
     </div>
   </header>
 
@@ -49,7 +70,7 @@
 
     </section>
 
-    <!-- Section 2 - Description -->
+    <!-- Section 2 - Features -->
     <section class="section-dp">
       <div class="container">
         <h2 class="section-header hidden">Features</h2>
@@ -60,8 +81,8 @@
                 <use href="./images/icons.svg#icon-features_01_antenna"></use>
               </svg>
             </div>
-            <h3 class="subheader">Strategy</h3>
-            <p class="paragraph">
+            <h2 class="subheader">Strategy</h2>
+            <p class="paragraph features-item-paragraph">
               Our goal is to identify the business problem to walk away with the perfect and creative solution.
             </p>
           </li>
@@ -71,8 +92,8 @@
                 <use href="./images/icons.svg#icon-features_02_clock"></use>
               </svg>
             </div>
-            <h3 class="subheader">Punctuality</h3>
-            <p class="paragraph">
+            <h2 class="subheader">Punctuality</h2>
+            <p class="paragraph features-item-paragraph">
               Bring the key message to the brand's audience for the best price within the shortest possible time.
             </p>
           </li>
@@ -82,8 +103,8 @@
                 <use href="./images/icons.svg#icon-features_03_diagram"></use>
               </svg>
             </div>
-            <h3 class="subheader">Diligence</h3>
-            <p class="paragraph">
+            <h2 class="subheader">Diligence</h2>
+            <p class="paragraph features-item-paragraph">
               Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
             </p>
           </li>
@@ -93,8 +114,8 @@
                 <use href="./images/icons.svg#icon-features_04_astronaut"></use>
               </svg>
             </div>
-            <h3 class="subheader">Technologies</h3>
-            <p class="paragraph">
+            <h2 class="subheader">Technologies</h2>
+            <p class="paragraph features-item-paragraph">
               Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
             </p>
           </li>
@@ -103,7 +124,7 @@
     </section>
 
     <!-- Section 3 - Services -->
-    <section class="section">
+    <section class="section section-services">
       <div class="container">
         <h2 class="section-header services-header">What are we doing</h2>
         <ul class="list services">
@@ -124,7 +145,7 @@
           <li class="team-item">
             <img src="./images/team/01_mark_guerrero.jpg" alt="Mark Guerrero" width="264">
             <div class="team-item-text">
-              <h3 class="subheader">Mark Guerrero</h3>
+              <h3 class="team-item-subheader">Mark Guerrero</h3>
               <p class="paragraph">Product Designer</p>
               <ul class="list team-item-social">
                 <li class="team-item-social-icon">
@@ -162,7 +183,7 @@
           <li class="team-item">
             <img src="./images/team/02_tom_ford.jpg" alt="Tom Ford" width="264">
             <div class="team-item-text">
-              <h3 class="subheader">Tom Ford</h3>
+              <h3 class="team-item-subheader">Tom Ford</h3>
               <p class="paragraph">Frontend Developer</p>
               <ul class="list team-item-social">
                 <li class="team-item-social-icon">
@@ -199,7 +220,7 @@
           <li class="team-item">
             <img src="./images/team/03_camila_garcia.jpg" alt="Camila Garcia" width="264">
             <div class="team-item-text">
-              <h3 class="subheader">Camila Garcia</h3>
+              <h3 class="team-item-subheader">Camila Garcia</h3>
               <p class="paragraph">Marketing</p>
               <ul class="list team-item-social">
                 <li class="team-item-social-icon">
@@ -236,7 +257,7 @@
           <li class="team-item">
             <img src="./images/team/04_daniel_wilson.jpg" alt="Daniel Wilson" width="264">
             <div class="team-item-text">
-              <h3 class="subheader">Daniel Wilson</h3>
+              <h3 class="team-item-subheader">Daniel Wilson</h3>
               <p class="paragraph">UI Designer</p>
               <ul class="list team-item-social">
                 <li class="team-item-social-icon">
@@ -328,10 +349,12 @@
 
   </main>
 
+
+  <!-- Footer -->
   <footer class="footer section">
     <div class="container footer-container">
-      <div class="footer-logo">
-        <a href="./index.html" class="logo link">Web<span class="logo-studio-dark">Studio</span></a>
+      <div class="footer-about">
+        <a href="./index.html" class="footer-logo link">Web<span class="logo-studio-dark">Studio</span></a>
         <p class="footer-paragraph">
           Increase the flow of customers and sales for your business with digital
           marketing & growth solutions.
