@@ -18,11 +18,6 @@
 
   /* transitions */
   --standardTransition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* breakpoints */
-  --mobile: 428px;
-  --tablet: 768px;
-  --desktop: 1440px;
 }
 
 html {
@@ -79,12 +74,11 @@ p {
 }
 
 .subheader {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11em;
   letter-spacing: 0.02em;
-  color: var(--darkColor);
-  margin-bottom: 8px;
+  text-align: center;
 }
 
 .paragraph {
@@ -102,7 +96,7 @@ p {
   padding: 96px 0;
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
   .section-dp {
     padding: 120px 0;
   }
@@ -113,10 +107,54 @@ p {
 }
 
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 428px;
   margin: 0 auto;
-  padding: 0 15px 0 15px;
+  padding: 0 16px;
 }
+
+/* Small tablet */
+@media only screen and (min-width: 468px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+/* Medium tablet tablet */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1158px) {
+  .container {
+    /* min-width: 1158px; */
+    max-width: 1440px;
+    padding: 0 15px;
+  }
+
+  .subheader {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: 0.02em;
+    color: var(--darkColor);
+    margin-bottom: 8px;
+  }
+}
+
+/* 
+@media screen and (max-width: 800px) {
+ 
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+} */
 
 .btn-primary {
   font-family: 'Roboto', sans-serif;
@@ -182,22 +220,6 @@ p {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-@media screen and (max-width: 800px) {
-  .subheader {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11em;
-    letter-spacing: 0.02em;
-    text-align: center;
-  }
-
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
 }
 
 /* Checkbox styling */
@@ -381,6 +403,12 @@ p {
   position: absolute;
   left: 16px;
   top: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-logo {
+    margin-right: 0;
+  }
 }
 
 .logo-studio {
@@ -606,7 +634,46 @@ p {
   color: var(--pressedStateColor);
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+  }
+  .menu-button {
+    display: none;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header-logo {
+    position: static;
+  }
+
+  .contacts {
+    text-indent: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin: 0;
+  }
+
+  .contact {
+    font-size: 12px;
+    line-height: 1.17em;
+  }
+
+  .address {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
   .menu {
     display: flex;
     gap: 40px;
@@ -667,7 +734,7 @@ p {
   padding: 0;
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
   .hero {
     background-color: var(--darkColor);
     width: 100%;
@@ -719,7 +786,26 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 429px) {
+@media only screen and (min-width: 768px) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+    margin-bottom: 0;
+  }
+
+  .features-subheader {
+    text-align: left;
+    line-height: 1.11em;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
   .features {
     display: flex;
     gap: 24px;
@@ -771,7 +857,13 @@ p {
   width: calc(100%-3 * 16px);
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
+  .section-services {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
   .section-services {
     display: block;
   }
@@ -782,7 +874,10 @@ p {
 /* ****************************************************** */
 
 .team {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  margin: 0 auto;
 }
 
 .team-header {
@@ -796,31 +891,35 @@ p {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   padding: 0;
-  margin: 0 auto 72px;
+  margin: 0 auto;
 }
 
-.team-item:last-child {
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
   .team {
     display: flex;
-    gap: 24px;
-    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+    justify-content: center;
   }
 
   .team-item {
     background-color: var(--bodyColor);
     width: 264px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
-    padding: 0;
+    margin: 0 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
   }
 
-  .team-item:last-child {
-    margin-bottom: 72px;
+  .team-item {
+    background-color: var(--bodyColor);
+    width: 264px;
   }
 }
 
@@ -871,11 +970,11 @@ p {
 
 .customers-list {
   display: flex;
-  gap: 16px;
+  gap: 72px 16px;
   flex-wrap: wrap;
   row-gap: 72px;
-  margin-top: 0;
-  margin-bottom: 0;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .customers-list-item {
@@ -883,9 +982,22 @@ p {
   height: 88px;
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
   .customers-list {
-    margin: 0;
+    display: flex;
+    gap: 72px 24px;
+    /* max-width: 552px; */
+    /* margin: 0 auto; */
+  }
+
+  .customers-list-item {
+    width: 168px;
+    height: 88px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .customers-list {
     display: flex;
     gap: 24px;
     justify-content: center;
@@ -893,7 +1005,6 @@ p {
 
   .customers-list-item {
     width: calc((100% - (24px * 5)) / 6);
-    height: 88px;
   }
 }
 
@@ -960,7 +1071,7 @@ p {
   color: var(--lightBackgroundColor);
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 1158px) {
   .footer-container {
     display: flex;
     justify-content: start;
@@ -1015,7 +1126,7 @@ p {
   background-color: var(--successColor);
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 1158px) {
   .footer-social {
     max-width: 264px;
     margin: 0;
@@ -1094,7 +1205,7 @@ p {
   transition: background-color 250ms var(--standardTransition);
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 1158px) {
   .footer-subscribe {
     margin-left: 80px;
   }

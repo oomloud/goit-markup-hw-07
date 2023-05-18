@@ -10,5 +10,6 @@
     "editorBracketHighlight.foreground5": "#ff0077",
     "editorBracketHighlight.foreground6": "#ff803b",
     "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
-  }
+  },
+  "livePreview.defaultPreviewPath": "/index.html"
 }
