@@ -913,12 +913,11 @@ p {
   line-height: 1.11em;
   margin-bottom: 8px;
 }
-@media only screen and (min-width: 768) {
+@media only screen and (min-width: 768px) {
   .features-subheader {
     text-align: left;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .features-icon-svg {
     width: 64px;
