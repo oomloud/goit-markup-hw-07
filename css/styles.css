@@ -634,11 +634,13 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .address {
+    margin-top: 0;
     margin-left: 0;
   }
 }
 @media only screen and (min-width: 1158px) {
   .address {
+    margin-top: 0;
     margin-left: auto;
   }
 }
